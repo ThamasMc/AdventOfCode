@@ -1,7 +1,5 @@
-var fs = require('fs');
-
-const puzzleStr = String(fs.readFileSync("puzzle.txt"));
-const testOne = String(fs.readFileSync("test1.txt"));
+import { puzzleStr } from "./inputs.js";
+import { testOne } from "./inputs.js";
 
 function calibrate(puzzleInput) {
     let puzzleArr = puzzleInput.split(/\r?\n/);
@@ -40,11 +38,11 @@ function recursiveStringCheck(checkee) {
 // Tests
 console.log(calibrate(testOne)); // 142
 
-// console.log(recursiveStringCheck("1")); // [1, 1]
-console.log(recursiveStringCheck("2ca3bb4")); // [2, 4]
-console.log(recursiveStringCheck("aa777dfasd3asdfasd9asf0")); // [7, 0]
-console.log(recursiveStringCheck("f0054r")); // [0, 4]
-console.log(recursiveStringCheck("1oo5rr")); // [1, 5]
+// console.log(recursiveStringCheck("1")); // 11
+console.log(recursiveStringCheck("2ca3bb4")); // 24
+console.log(recursiveStringCheck("aa777dfasd3asdfasd9asf0")); // 70
+console.log(recursiveStringCheck("f0054r")); // 4
+console.log(recursiveStringCheck("1oo5rr")); // 15
 
 // Conduct the final check
 console.log(calibrate(puzzleStr));
