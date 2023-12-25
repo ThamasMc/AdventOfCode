@@ -1,7 +1,7 @@
-import { puzzleStr } from "./inputs.js";
-import { testOne } from "./inputs.js";
+import { puzzleStr } from "./inputs/inputs.js";
+import { testOne } from "./inputs/inputs.js";
 
-function calibrate(puzzleInput) {
+export function calibrate(puzzleInput) {
     let puzzleArr = puzzleInput.split(/\r?\n/);
     let rowNums = [];
     puzzleArr.forEach(row => {
@@ -11,7 +11,7 @@ function calibrate(puzzleInput) {
     return sum;
 };
 
-function recursiveStringCheck(checkee) {
+export function recursiveStringCheck(checkee) {
     if(checkee.length < 1) {
         throw new Error(`String ${checkee} must contain a number and have a least one character`);
     }
@@ -35,14 +35,3 @@ function recursiveStringCheck(checkee) {
     }
 }
 
-// Tests
-console.log(calibrate(testOne)); // 142
-
-// console.log(recursiveStringCheck("1")); // 11
-console.log(recursiveStringCheck("2ca3bb4")); // 24
-console.log(recursiveStringCheck("aa777dfasd3asdfasd9asf0")); // 70
-console.log(recursiveStringCheck("f0054r")); // 4
-console.log(recursiveStringCheck("1oo5rr")); // 15
-
-// Conduct the final check
-console.log(calibrate(puzzleStr));

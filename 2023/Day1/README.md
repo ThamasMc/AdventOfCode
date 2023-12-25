@@ -51,4 +51,7 @@ Your puzzle answer was 52840.
 
 Both parts of this puzzle are complete! They provide two gold stars: **
 
+## Summary
+Using this as an opportunity to improve my JS skills. For the first round here, went ahead and approached this through running JS using the node engine via the CLI.
 
+Learned a lot about how the different versions of Node I bounce around with some older projects at work influence the ability you have to load JS modules. As well as improved my understanding of ESModule imports via named or default exports.

@@ -1,8 +1,6 @@
-import { puzzleStr } from "./inputs.js";
-import { testTwo } from "./inputs.js";
 import wordsToDigits from "./digits.js";
 
-function calibrate(puzzleInput) {
+export function calibrate(puzzleInput) {
     let puzzleArr = puzzleInput.split(/\r?\n/);
     let rowNums = [];
     let placeHolder;
@@ -70,16 +68,3 @@ function recursiveStringCheck(context, checkee) {
         return recursiveStringCheck(context, checkee.substr(1, checkee.length - 2));
     }
 }
-
-// Tests
-console.log(calibrate(testTwo)); // 281
-// console.log(testTwo); // Spit out the string
-
-// console.log(recursiveStringCheck("1")); // 11
-// console.log(recursiveStringCheck("2ca3bb4")); // 24
-// console.log(recursiveStringCheck("aa777dfasd3asdfasd9asf0")); // 70
-// console.log(recursiveStringCheck("f0054r")); // 4
-// console.log(recursiveStringCheck("1oo5rr")); // 15
-
-// Conduct the final check
-console.log(calibrate(puzzleStr));
