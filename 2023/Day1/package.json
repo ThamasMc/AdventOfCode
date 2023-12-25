@@ -1,0 +1,6 @@
+{
+    "name": "adventofcode",
+    "description": "My workspace for practicing Advent of Code",
+    "version": "1.0.0",
+    "type": "module"
+  }
